@@ -11,8 +11,8 @@ export default class Test extends React.Component {
     }
     
     componentDidMount(){
-        APIService.getBooks().then((data) => {
-            this.setState({ foods: data })
+        APIService.getBooks().then((response) => {
+            this.setState({ foods: response.data })
             console.log(this.state.data)
           })
           .catch(function (ex) {
